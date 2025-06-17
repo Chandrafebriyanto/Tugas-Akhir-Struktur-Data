@@ -1,74 +1,206 @@
-# **Tugas Akhir - Implementasi Struktur Data dalam C++**
+```md
+# Tugas-Akhir-Struktur-Data
 
-Repositori ini berisi kode sumber untuk proyek Tugas Akhir mata kuliah Struktur Data. Proyek ini adalah sebuah aplikasi konsol sederhana yang mengimplementasikan konsep-konsep dasar struktur data untuk mengelola sebuah data.
-
-<!-- Ganti baris di bawah ini dengan tangkapan layar program Anda -->
-[Tangkapan Layar Aplikasi Anda]
-
-## **Deskripsi Proyek** 📖
-
-Program ini merupakan aplikasi *command-line interface* (CLI) yang dibangun menggunakan bahasa C++. Tujuannya adalah untuk mendemonstrasikan penerapan praktis dari struktur data fundamental seperti `struct` dan `array` dalam sebuah kasus penggunaan sederhana, yaitu manajemen data. Pengguna dapat melakukan operasi dasar **CRUD** (*Create, Read, Update, Delete*) pada data yang disimpan sementara selama program berjalan.
+> Visualisasi struktur hubungan antar-negara ASEAN menggunakan Graph di Python.
 
 ---
-## **Fitur Utama** ✨
 
-* **Tambah Data**: Menambahkan entitas data baru ke dalam sistem.
-* **Tampilkan Data**: Menampilkan seluruh data yang telah tersimpan dalam format tabel yang rapi.
-* **Ubah Data**: Mengedit atau memperbarui informasi dari data yang sudah ada.
-* **Hapus Data**: Menghapus data dari daftar berdasarkan kriteria tertentu.
-* **Pencarian Data**: Mencari data spesifik dalam daftar.
-* **Pengurutan Data**: Mengurutkan data berdasarkan kriteria tertentu (misalnya, nama atau nomor induk).
+## 📁 Isi Repository
 
----
-## **Struktur Data & Algoritma** 🏗️
+```
 
-* **`struct`**: Digunakan untuk merepresentasikan model data (misalnya, data mahasiswa) secara terstruktur, menggabungkan beberapa tipe data menjadi satu unit.
-* **`array`**: Digunakan sebagai wadah utama untuk menyimpan kumpulan `struct` data tersebut.
-* **Algoritma Pencarian Linear**: Diimplementasikan untuk fitur pencarian data.
-* **Algoritma Pengurutan (contoh: Bubble Sort)**: Diimplementasikan untuk mengurutkan data yang ditampilkan.
+Tugas-Akhir-Struktur-Data/
+├── aseanmap.py         # Skrip utama untuk membangun dan menampilkan jaringan ASEAN
+├── data/               # (Opsional) folder untuk menyimpan dataset seperti CSV atau JSON
+├── output/             # (Opsional) folder untuk menyimpan output dalam bentuk gambar (.png/.svg)
+├── requirements.txt    # Daftar dependensi Python
+└── README.md           # Dokumentasi ini
+
+```
 
 ---
-## **Teknologi yang Digunakan** 💻
 
-* **Bahasa Pemrograman**: C++
-* **Compiler**: g++ (direkomendasikan menggunakan MinGW-w64 untuk Windows)
-* **Lingkungan Pengembangan**: Visual Studio Code, Dev-C++, atau IDE C++ lainnya.
+## 🎯 Deskripsi
 
----
-## **Instalasi dan Cara Menjalankan** 🚀
+Skripsi ini bertujuan memperkenalkan analisis dan visualisasi data hubungan antar-negara anggota ASEAN menggunakan konsep Graph (node & edge).  
+Dengan `networkx` dan `matplotlib`, kita dapat:
 
-Pastikan Anda telah menginstal C++ compiler (seperti **g++** dari MinGW) di sistem Anda.
-
-1.  **Clone Repositori**
-    Buka terminal atau Git Bash, lalu jalankan perintah berikut:
-    ```bash
-    git clone [https://github.com/Chandrafebriyanto/Tugas-Akhir-Struktur-Data.git](https://github.com/Chandrafebriyanto/Tugas-Akhir-Struktur-Data.git)
-    ```
-
-2.  **Masuk ke Direktori Proyek**
-    ```bash
-    cd Tugas-Akhir-Struktur-Data
-    ```
-
-3.  **Kompilasi Kode**
-    Gunakan compiler g++ untuk mengompilasi semua file `.cpp` menjadi sebuah file *executable*. Beri nama `program.exe` (untuk Windows) atau `program` (untuk Linux/macOS).
-    ```bash
-    g++ main.cpp -o program
-    ```
-    *Catatan: Jika Anda memiliki beberapa file sumber, tambahkan semuanya dalam perintah kompilasi (`g++ main.cpp fungsi.cpp -o program`).*
-
-4.  **Jalankan Program**
-    Setelah kompilasi berhasil, jalankan program dari terminal:
-    ```bash
-    ./program
-    ```
-    Atau di Command Prompt Windows:
-    ```bash
-    program.exe
-    ```
+- Memodelkan negara sebagai node.
+- Memodelkan hubungan antar-negara (seperti perbatasan, perdagangan, transportasi) sebagai edge.
+- Melihat pola/koneksi visual antar negara.
 
 ---
-## **Kontributor** 👥
 
-* **Nama**: Chandra Febriyanto
-* **GitHub**: [@Chandrafebriyanto](https://github.com/Chandrafebriyanto)
+## ✔️ Fitur Utama
+
+- Membangun Graph negara ASEAN (10 anggota).
+- Menambahkan edge untuk menggambarkan relasi (bobot & jenis bisa dikembangkan).
+- Visualisasi Graph interaktif/statik.
+- Ekspor hasil visual menjadi file gambar.
+
+---
+
+## 🧩 Prasyarat
+
+- Python ≥ 3.7
+- Library berikut:
+```
+
+networkx
+matplotlib
+pandas       # (opsional, jika menggunakan data dari CSV/JSON)
+
+````
+
+Sertakan file `requirements.txt` dengan konten:
+
+```text
+networkx>=2.8
+matplotlib>=3.5
+pandas>=1.4
+````
+
+---
+
+## 🚀 Instalasi & Penggunaan
+
+1. **Clone repo:**
+
+   ```bash
+   git clone https://github.com/Chandrafebriyanto/Tugas-Akhir-Struktur-Data.git
+   cd Tugas-Akhir-Struktur-Data
+   ```
+
+2. **Instal dependensi:**
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Jalankan skrip:**
+
+   ```bash
+   python aseanmap.py
+   ```
+
+4. **Output:**
+
+   * Akan muncul jendela visualisasi graph.
+   * Jika script konfigurasi menyimpan gambar, hasil bisa ditemukan di `output/`.
+
+---
+
+## 📝 Contoh Data & Customisasi
+
+Contoh payload dalam `aseanmap.py`:
+
+```python
+nodes = [
+    "Indonesia", "Malaysia", "Philippines", "Singapore", 
+    "Thailand", "Brunei", "Vietnam", "Laos", "Cambodia", "Myanmar"
+]
+
+edges = [
+    ("Indonesia", "Malaysia"),
+    ("Indonesia", "Singapore"),
+    ("Thailand", "Laos"),
+    ("Cambodia", "Vietnam"),
+    # dsb.
+]
+```
+
+Kamu dapat modifikasi:
+
+* Menambahkan bobot: `edges = [(u, v, {"weight":5})]`
+* Membaca file CSV:
+
+  ```python
+  import pandas as pd
+  df = pd.read_csv("data/edges.csv")
+  # iterasi df ke graph
+  ```
+* Mengubah layout atau warna node/edge sesuai kebutuhan.
+
+---
+
+## 📈 Ekspor & Visualisasi
+
+* Tambahkan kode berikut untuk menyimpan hasil grafik:
+
+  ```python
+  plt.savefig("output/asean_graph.png", dpi=300)
+  ```
+
+* Bisa juga ekspor ke `.svg` untuk kualitas vektor:
+
+  ```python
+  plt.savefig("output/asean_graph.svg")
+  ```
+
+---
+
+## 💡 Ide Pengembangan
+
+* Tambah bobot edge berdasarkan data nyata (volume perdagangan, populasi, jarak).
+* Gunakan `networkx` untuk analisis seperti degree centrality, shortest path, dsb.
+* Buat visual interaktif berbasis web dengan `Streamlit` atau `Dash`.
+* Tambahkan folder `tests/` dan `pytest` untuk unit testing.
+* Automasi CI/CD (GitHub Actions) untuk membangun, menguji, dan publish dokumentasi/gambar.
+
+---
+
+## ✅ Testing
+
+Contoh unit test (jika digunakan `pytest`):
+
+```python
+from aseanmap import build_graph
+
+def test_graph_nodes():
+    g = build_graph()
+    assert set(g.nodes()) == set([
+        "Indonesia", "Malaysia", "Philippines", 
+        "Singapore", "Thailand", "Brunei", 
+        "Vietnam", "Laos", "Cambodia", "Myanmar"
+    ])
+```
+
+---
+
+## 🤝 Kontribusi
+
+1. Fork repo ini 💡
+2. Buat branch fitur: `git checkout -b fitur-graph-digital`
+3. Commit perubahan: `git commit -am 'Tambah bobot edge & layout interaktif'`
+4. Push branch: `git push origin fitur-graph-digital`
+5. Buat Pull Request ✨
+
+---
+
+## 📄 Lisensi
+
+Project ini berada di bawah lisensi **MIT License**.
+Lihat file [LICENSE](LICENSE) untuk detail.
+
+---
+
+## 🧑‍💻 Autor
+
+**Chandra Febriyanto** – [GitHub](https://github.com/Chandrafebriyanto)
+
+---
+
+> 📅 Terakhir diperbarui: Juni 2025
+
+```
+
+---
+
+### Cara menggunakan:
+1. Buka repositori GitHub-mu.
+2. Buat atau edit file `README.md`.
+3. Salin seluruh konten di atas.
+4. Commit dan push.
+
+Jika kamu butuh bantuan membuat `requirements.txt`, menambahkan file lisensi, atau preview visualisasi hasil graph, tinggal beri tahu saja!
+```
