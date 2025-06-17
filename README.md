@@ -29,3 +29,7 @@ Sebuah program Python yang memungkinkan pengguna untuk membuat dan menampilkan g
    ```bash
    git clone https://github.com/Chandrafebriyanto/Tugas-Akhir-Struktur-Data.git
    cd Tugas-Akhir-Struktur-Data
+2. **Install dependencies**
+   ```bash
+   pip install networkx matplotlib
+
