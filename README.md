@@ -1,53 +1,88 @@
-# 🌏 ASEAN Map Visualizer
 
-This project is a Python-based visualization tool that plots a map of ASEAN (Association of Southeast Asian Nations) countries using basic data structures and file handling concepts. It was developed as part of a final assignment for a Data Structures course.
+# Tugas Akhir Struktur Data - ASEAN Map Visualization
 
-## 📁 Repository Structure
+Repositori ini berisi implementasi akhir dari tugas mata kuliah Struktur Data, yang menampilkan peta negara-negara ASEAN dengan representasi graf dan visualisasi menggunakan Python.
 
-- `aseanmap.py`: The main Python script that loads coordinate data from a text file and visualizes the ASEAN map.
-- `koordinat.txt`: Contains longitude and latitude coordinates of major ASEAN countries and cities (make sure this file is in the same directory as the script).
-- `README.md`: This documentation file.
+## 🗺️ Deskripsi Proyek
 
-## 📌 Features
+File utama dalam repositori ini adalah `aseanmap.py`, yang membuat representasi grafis dari negara-negara ASEAN menggunakan struktur data graf. Program ini:
 
-- Reads and parses coordinate data from a text file.
-- Uses `matplotlib` for plotting country points on a 2D map.
-- Displays labeled markers for ASEAN member countries.
-- Demonstrates usage of fundamental data structures like lists and dictionaries.
+- Mewakili setiap negara sebagai node (simpul).
+- Menghubungkan negara-negara yang berbatasan langsung sebagai edge (sisi).
+- Menggunakan pustaka `networkx` dan `matplotlib` untuk memvisualisasikan konektivitas antar negara.
+- Memberikan gambaran sederhana bagaimana graf dapat digunakan dalam konteks geografis.
 
-## 🛠️ Technologies Used
+Contoh visualisasi:
+
+```
+Brunei <-> Malaysia
+Malaysia <-> Thailand
+Thailand <-> Myanmar
+...
+```
+
+## 🧰 Teknologi yang Digunakan
 
 - Python 3
-- `matplotlib` (for plotting)
-- Basic file I/O in Python
-- Data structures (lists, dictionaries)
+- [NetworkX](https://networkx.org/)
+- [Matplotlib](https://matplotlib.org/)
 
-## ▶️ How to Run
+## 📂 Struktur File
 
-1. Clone the repository:
+```bash
+.
+├── aseanmap.py       # Script utama untuk visualisasi peta graf negara ASEAN
+└── README.md         # Dokumentasi proyek
+```
 
-   ```bash
-   git clone https://github.com/Chandrafebriyanto/Tugas-Akhir-Struktur-Data.git
-   cd Tugas-Akhir-Struktur-Data
+## 🚀 Cara Menjalankan
 
-2. Make sure you have Python 3 and matplotlib installed:
-   ```bash
-   pip install matplotlib
-   
-3. Run the script:
-   ```bash
-   python aseanmap.py
+1. Pastikan Python 3 telah terinstal.
+2. Instal dependensi terlebih dahulu:
 
-## 🌐 Output
-The script will display a simple plotted map of ASEAN countries based on the provided coordinates. Each country/city is marked with a point and labeled.
+```bash
+pip install networkx matplotlib
+```
 
-##📚 Learning Outcomes
-This project reinforces:
-  -Parsing structured text files in Python
-  -Using Python dictionaries to map labels to data
-  -Plotting using matplotlib
-  -Applying data structures to solve real-world problems
+3. Jalankan program:
 
+```bash
+python aseanmap.py
+```
 
-## ✍️ Author
-  -Candra Febriyanto
+Visualisasi graf ASEAN akan ditampilkan dalam jendela baru.
+
+## 🌍 Daftar Negara ASEAN yang Direpresentasikan
+
+- Indonesia
+- Malaysia
+- Brunei
+- Thailand
+- Myanmar
+- Laos
+- Vietnam
+- Kamboja
+- Filipina
+- Singapura
+- Timor Leste (opsional/tambahan)
+
+## 📌 Tujuan Pembelajaran
+
+Proyek ini dirancang untuk memperdalam pemahaman tentang:
+
+- Representasi graf tak berarah dalam Python
+- Visualisasi data berbasis graf
+- Aplikasi praktis struktur data dalam geografi
+
+## 👨‍💻 Kontributor
+
+- **Nama:** Chandra Febriyanto  
+- **NIM:** (Silakan isi jika perlu)
+
+## 📎 Link Repositori
+
+🔗 [GitHub Repository](https://github.com/Chandrafebriyanto/Tugas-Akhir-Struktur-Data)
+
+---
+
+> Proyek ini dibuat sebagai bagian dari tugas akhir mata kuliah *Struktur Data*. Semua kontribusi dan masukan sangat dihargai!
