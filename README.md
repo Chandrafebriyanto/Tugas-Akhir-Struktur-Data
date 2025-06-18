@@ -1,88 +1,88 @@
 
-# Tugas Akhir Struktur Data - ASEAN Map Visualization
+# ASEAN Map Visualization
 
-Repositori ini berisi implementasi akhir dari tugas mata kuliah Struktur Data, yang menampilkan peta negara-negara ASEAN dengan representasi graf dan visualisasi menggunakan Python.
+This repository contains a Python script for visualizing the ASEAN member states on a map using the `matplotlib` and `basemap` libraries. The script highlights each country and labels it, providing a simple geographical representation of the ASEAN region.
 
-## 🗺️ Deskripsi Proyek
+## Table of Contents
 
-File utama dalam repositori ini adalah `aseanmap.py`, yang membuat representasi grafis dari negara-negara ASEAN menggunakan struktur data graf. Program ini:
+- [Features](#features)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Output](#output)
+- [Contributing](#contributing)
+- [License](#license)
+- [Acknowledgements](#acknowledgements)
 
-- Mewakili setiap negara sebagai node (simpul).
-- Menghubungkan negara-negara yang berbatasan langsung sebagai edge (sisi).
-- Menggunakan pustaka `networkx` dan `matplotlib` untuk memvisualisasikan konektivitas antar negara.
-- Memberikan gambaran sederhana bagaimana graf dapat digunakan dalam konteks geografis.
+## Features
 
-Contoh visualisasi:
+- Renders a world map centered around the ASEAN region.
+- Highlights and labels each of the 10 ASEAN member states: Indonesia, Malaysia, Philippines, Singapore, Thailand, Brunei Darussalam, Vietnam, Laos, Myanmar, and Cambodia.
+- Uses different colors to distinguish land, ocean, and country fills for better visualization.
+- Displays country names clearly on the map.
 
-```
-Brunei <-> Malaysia
-Malaysia <-> Thailand
-Thailand <-> Myanmar
-...
-```
+## Requirements
 
-## 🧰 Teknologi yang Digunakan
+The script requires the following Python libraries:
 
-- Python 3
-- [NetworkX](https://networkx.org/)
-- [Matplotlib](https://matplotlib.org/)
+- `matplotlib`
+- `numpy`
+- `basemap` (and its data dependencies)
 
-## 📂 Struktur File
+## Installation
 
-```bash
-.
-├── aseanmap.py       # Script utama untuk visualisasi peta graf negara ASEAN
-└── README.md         # Dokumentasi proyek
-```
+1.  **Clone the repository:**
 
-## 🚀 Cara Menjalankan
+    ```bash
+    git clone [https://github.com/Chandrafebriyanto/Tugas-Akhir-Struktur-Data.git](https://github.com/Chandrafebriyanto/Tugas-Akhir-Struktur-Data.git)
+    cd Tugas-Akhir-Struktur-Data
+    ```
 
-1. Pastikan Python 3 telah terinstal.
-2. Instal dependensi terlebih dahulu:
+2.  **Install the required libraries:**
 
-```bash
-pip install networkx matplotlib
-```
+    It's highly recommended to use a virtual environment.
 
-3. Jalankan program:
+    ```bash
+    pip install matplotlib numpy
+    pip install basemap
+    pip install basemap-data-hires # For high-resolution coastlines (optional but recommended)
+    ```
+
+    **Note on `basemap` installation:** `basemap` can sometimes be tricky to install directly via `pip` due to its dependencies on GEOS and PROJ4. If you encounter issues, consider using `conda` for installation (`conda install -c anaconda basemap`) or refer to the Basemap documentation for specific instructions for your operating system.
+
+## Usage
+
+To run the script and display the ASEAN map:
 
 ```bash
 python aseanmap.py
 ```
 
-Visualisasi graf ASEAN akan ditampilkan dalam jendela baru.
+This will open a `matplotlib` window displaying the generated map.
 
-## 🌍 Daftar Negara ASEAN yang Direpresentasikan
+## Output
 
-- Indonesia
-- Malaysia
-- Brunei
-- Thailand
-- Myanmar
-- Laos
-- Vietnam
-- Kamboja
-- Filipina
-- Singapura
-- Timor Leste (opsional/tambahan)
+The script generates a map similar to the following:
 
-## 📌 Tujuan Pembelajaran
+*(Note: An example image `asean_map_example.png` should be placed in an `images` directory within your repository for this to display correctly in the README.)*
 
-Proyek ini dirancang untuk memperdalam pemahaman tentang:
+## Contributing
 
-- Representasi graf tak berarah dalam Python
-- Visualisasi data berbasis graf
-- Aplikasi praktis struktur data dalam geografi
+Contributions are welcome\! If you have suggestions for improvements or new features, please feel free to:
 
-## 👨‍💻 Kontributor
+1.  Fork the repository.
+2.  Create a new branch (`git checkout -b feature/your-feature-name`).
+3.  Make your changes.
+4.  Commit your changes (`git commit -m 'Add some feature'`).
+5.  Push to the branch (`git push origin feature/your-feature-name`).
+6.  Open a Pull Request.
 
-- **Nama:** Chandra Febriyanto  
-- **NIM:** (Silakan isi jika perlu)
+## License
 
-## 📎 Link Repositori
+This project is licensed under the MIT License - see the [LICENSE](https://www.google.com/search?q=LICENSE) file for details.
+*(Note: Please create a https://www.google.com/search?q=LICENSE file in your repository if you haven't already.)*
 
-🔗 [GitHub Repository](https://github.com/Chandrafebriyanto/Tugas-Akhir-Struktur-Data)
+## Acknowledgements
 
----
-
-> Proyek ini dibuat sebagai bagian dari tugas akhir mata kuliah *Struktur Data*. Semua kontribusi dan masukan sangat dihargai!
+  - The `matplotlib` and `basemap` libraries for powerful plotting and mapping capabilities.
+  - [Basemap documentation](https://matplotlib.org/basemap/) for installation and usage guidance.
